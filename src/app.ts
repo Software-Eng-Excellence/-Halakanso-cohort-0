@@ -21,6 +21,7 @@ private orders: Order[] = [];
 return this.orders;
   }
   public  addOrder(item : string, price: number){
+    try{
    const order:Order={id: this.orders.length +1, price,item};
    //hon closed for modifications 
   // new Validator().validate(order);
@@ -28,7 +29,11 @@ return this.orders;
   ///hon lma ma bade 2a3mel instance w2njber fe bst3mel DI
   //hon feha tkoun ma 3am ta3mel che 
 this.validator.validate(order)
-    this.orders.push( order);      
+    this.orders.push( order);    }
+    // hon bst3mel try catch kerml ma chouf l error mn lvalidator 
+    catch(error: any){
+      throw new Error("[orderManagement] Error adding order:" + error.message);
+    }  
   }
   getOrder(id:number){
     return this.orders.find(order => order.id === id);
@@ -69,6 +74,7 @@ new MaxPriceValidator()
 
 
   ]
+   public  static validate: (Order: any) => void;
 
   
   public validate(order: Order)  {
@@ -97,7 +103,7 @@ class ItemValidator implements IValidator, IpossibleItems {
 
   public validate(order: Order) {
     if (!ItemValidator.possibleItems.includes(order.item)) {
-      throw new Error(`Invalid item. Must be one of: ${ItemValidator.possibleItems.join(", ")}`);
+throw new Error(`Invalid item. Must be one of: ${ItemValidator.possibleItems.join(", ")}`);
     };
   }
 

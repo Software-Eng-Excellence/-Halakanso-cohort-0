@@ -3,8 +3,8 @@ import { FinanceCalculator, OrderManagement, Validator } from "app";
   
   const orders = [
     { id: 1, item: "Sponge", price: 15 },
-    { id: 2, item: "Chocolate", price: 20 },
-    { id: 3, item: "Fruit", price: 18 },
+    { id: 2, item: "Chocolate", price: 10 },
+    { id: 3, item: "Fruit", price: 10},
     { id: 4, item: "Red Velvet", price: 25 },
     { id: 5, item: "Coffee", price: 8 },
   ];
