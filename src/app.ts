@@ -1,5 +1,7 @@
 //single resposability 3mlna la kel class y3ml 7aga wa7da w 3mlna class 3la el validation w 3la el finance w 3la el order management
 
+import logger from "./util/logger";
+
 
 
 
@@ -14,6 +16,7 @@ export class OrderManagement {
 constructor (private validator:IValidator, private calculator: ICalculator){
 // klche mn bara b7oto bl constractor hek ma boun 3am bjbour l methods bl class 
 //ys3mlo hay depencies ymken koun bade 8yer bl dependcies se3tha b8yer bl constracteurs 
+logger.debug(" orderManagement instance is created");
 
 }
 private orders: Order[] = [];
@@ -36,7 +39,11 @@ this.validator.validate(order)
     }  
   }
   getOrder(id:number){
-    return this.orders.find(order => order.id === id);
+    const order =this.orders.find(order => order.id === id);
+    if(!order){
+      logger.warn(`Order with ID ${id} not found`);
+    }   
+    return order;
   }
 getTotaleRevenue(){
 return this.calculator.getRevenue(  this.orders)
@@ -117,6 +124,8 @@ throw new Error(`Invalid item. Must be one of: ${ItemValidator.possibleItems.joi
         public validate(order: Order) {
         
           if (order.price < 0) {
+            logger.error(`price error: ${order.item}`);
+
             throw new Error("Price must be positive");
           }
         }}
