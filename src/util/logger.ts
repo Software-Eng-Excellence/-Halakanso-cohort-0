@@ -47,7 +47,7 @@ transports: [ // hon kerml wen badak 7tlak l log
     new winston.transports.File({ filename: "all.log" ,dirname:logDir,format:logFileFormat}),
 ],
 exceptionHandlers :[
-    new winston.transports.File({ filename: "exceptions.log",dirname:logDir }) ]
+    new winston.transports.File({ filename: "exceptionsssssssssssssss.log",dirname:logDir }) ]
 });
 if (isDev) {
     logger.add(new winston.transports.Console({format: logConsoleFormat,}));
