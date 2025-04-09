@@ -5,7 +5,7 @@ type Type = 'Birthday' | 'Wedding' | 'Anniversary' | 'Graduation' | 'Baby Shower
  export class Cake implements Item {
 
    
-// hone 3mlton private kerml ma bade 8yer fehon kerml hek 3mltlon constractor 
+/// hone 3mlton private kerml ma bade 8yer fehon kerml hek 3mltlon constractor 
 //immutable object can't change  it 
     private type: Type;
     private flavor: string;
