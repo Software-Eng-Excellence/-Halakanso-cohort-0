@@ -9,7 +9,7 @@ const config : Config.InitialOptions= {
   verbose : true,
   collectCoverage : true,
   collectCoverageFrom : ['src/**/*.ts'],
-  coverageDirectory : 'coverage',
+  coverageDirectory :  'coverage',
 coverageThreshold : {
   global: {
     
