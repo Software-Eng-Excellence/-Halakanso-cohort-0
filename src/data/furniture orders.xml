@@ -2,7 +2,7 @@
 <data>
     <row>
         <OrderID>3001</OrderID>
-        <Type>Table</Type>
+        <Type>Table </Type>
         <Material>Rattan</Material>
         <Color>Blue</Color>
         <Size>Extra Large</Size>

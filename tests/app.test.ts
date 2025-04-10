@@ -3,7 +3,7 @@ describe('OrderManagement', () => {
     interface Order {
         price: number;
         id: number;
-        item: string;
+        item:  string;
       }
       
     let validator: Validator;

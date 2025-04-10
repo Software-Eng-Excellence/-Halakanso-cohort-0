@@ -6,7 +6,7 @@
     "configurations": [
 
         {
-            "type": "node",
+            "type":  "node",
             "request": "launch",
             "name": "Debug Typescript ",
             "skipFiles": [
