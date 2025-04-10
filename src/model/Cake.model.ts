@@ -7,11 +7,11 @@ type Type = 'Birthday' | 'Wedding' | 'Anniversary' | 'Graduation' | 'Baby Shower
    
 // hone 3mlton private kerml ma bade 8yer fehon kerml hek 3mltlon constractor 
 //immutable object can't change  it 
-    private type: Type;
+    private type: string; // TYPE
     private flavor: string;
     private filling: string;
-    private size: string;
-    private layers: string;
+    private size: number;
+    private layers: number;
     private frostingType: string;
     private frostingFlavor: string;
     private decorationType: string;
@@ -21,15 +21,13 @@ type Type = 'Birthday' | 'Wedding' | 'Anniversary' | 'Graduation' | 'Baby Shower
     private allergies: string;
     private specialIngredients: string;
     private packagingType: string;
-    private price: string;
-    private quantity: string;
-
+  
     constructor(
-        type: Type,
+        type: string,
         flavor: string,
         filling: string,
-        size: string,
-        layers: string,
+        size: number,
+        layers: number,
         frostingType: string,
         frostingFlavor: string,
         decorationType: string,
@@ -39,8 +37,7 @@ type Type = 'Birthday' | 'Wedding' | 'Anniversary' | 'Graduation' | 'Baby Shower
         allergies: string,
         specialIngredients: string,
         packagingType: string,
-        price: string,
-        quantity: string,
+        
     ) {
         this.type = type;
         this.flavor = flavor;
@@ -56,8 +53,7 @@ type Type = 'Birthday' | 'Wedding' | 'Anniversary' | 'Graduation' | 'Baby Shower
         this.allergies = allergies;
         this.specialIngredients = specialIngredients;
         this.packagingType = packagingType;
-        this.price = price;
-        this.quantity = quantity;
+      
     }
 
     getCategory(): ItemCategory {
@@ -65,7 +61,7 @@ type Type = 'Birthday' | 'Wedding' | 'Anniversary' | 'Graduation' | 'Baby Shower
         
     }
 
-    public getType(): Type {
+    public getType(): string {
         return this.type;
     }
     
@@ -77,11 +73,11 @@ type Type = 'Birthday' | 'Wedding' | 'Anniversary' | 'Graduation' | 'Baby Shower
         return this.filling;
     }
 
-    public getSize(): string {
+    public getSize(): number {
         return this.size;
     }
 
-    public getLayers(): string {
+    public getLayers(): number {
         return this.layers;
     }
 
@@ -121,12 +117,6 @@ type Type = 'Birthday' | 'Wedding' | 'Anniversary' | 'Graduation' | 'Baby Shower
         return this.packagingType;
     }
 
-    public getPrice(): string {
-        return this.price;
-    }
-
-    public getQuantity(): string {
-        return this.quantity;
-    }
+   
 
 }
