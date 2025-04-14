@@ -15,8 +15,7 @@ export class Book implements Item {
     private publisher: string;
     private specialEdition: string;
     private packaging: string;
-    private price: string;
-    private quantity: string;
+  
 
     constructor(
         bookTitle: string,
@@ -27,8 +26,7 @@ export class Book implements Item {
         publisher: string,
         specialEdition: string,
         packaging: string,
-        price: string,
-        quantity: string
+       
     ) {
         this.bookTitle = bookTitle;
         this.author = author;
@@ -38,8 +36,7 @@ export class Book implements Item {
         this.publisher = publisher;
         this.specialEdition = specialEdition;
         this.packaging = packaging;
-        this.price = price;
-        this.quantity = quantity;
+       
     }
 
    
@@ -76,13 +73,7 @@ export class Book implements Item {
         return this.packaging;
     }
 
-    public getPrice(): string {
-        return this.price;
-    }
-
-    public getQuantity(): string {
-        return this.quantity;
-    }
+ 
 getCategory(): ItemCategory {
     return ItemCategory.BOOK;
 

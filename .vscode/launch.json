@@ -18,6 +18,7 @@
                 "${workspaceFolder}/**/*.js"
             ],
             "sourceMaps": true
+            
         }
     ]
 }

@@ -86,11 +86,12 @@ import { Cake } from "../Cake.model";
     public setPackagingType(packagingType: string): CakeBuilder {
         this.packagingType = packagingType;
         return this;
+        
     }
 
    
 
-    Build(): Cake { 
+  public  Build(): Cake { 
 
         const requiredFields = [
             this.type,

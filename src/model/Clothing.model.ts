@@ -12,8 +12,7 @@ export class Clothing implements Item {
     private gender: string;
     private packaging: string;
     private specialRequest: string;
-    private price: number;
-    private quantity: number;
+   
 
     constructor(
         clothingType: string,
@@ -25,8 +24,7 @@ export class Clothing implements Item {
         gender: string,
         packaging: string,
         specialRequest: string,
-        price: number,
-        quantity: number
+       
     ) {
         this.clothingType = clothingType;
         this.size = size;
@@ -37,8 +35,7 @@ export class Clothing implements Item {
         this.gender = gender;
         this.packaging = packaging;
         this.specialRequest = specialRequest;
-        this.price = price;
-        this.quantity = quantity;
+       
     }
 
     getClothingType(): string {
@@ -77,13 +74,7 @@ export class Clothing implements Item {
         return this.specialRequest;
     }
 
-    getPrice(): number {
-        return this.price;
-    }
-
-    getQuantity(): number {
-        return this.quantity;
-    }
+    
 
 getCategory ():ItemCategory
 {

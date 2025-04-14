@@ -103,6 +103,7 @@ type Type = 'Birthday' | 'Wedding' | 'Anniversary' | 'Graduation' | 'Baby Shower
 
     public getShape(): string {
         return this.shape;
+        
     }
 
     public getAllergies(): string {

@@ -8,20 +8,18 @@ export class Toy implements Item {
     private ageGroup: string;
     private brand: string;
     private material: string;
-    private batteryRequired: boolean;
-    private educational: boolean;
-    private price: number;
-    private quantity: number;
+    private batteryRequired:string;
+    private educational: string;
+  
 
     constructor(
         type: string,
         ageGroup: string,
         brand: string,
         material: string,
-        batteryRequired: boolean,
-        educational: boolean,
-        price: number,
-        quantity: number
+        batteryRequired: string,
+        educational: string,
+       
     ) {
     
         this.type = type;
@@ -30,8 +28,7 @@ export class Toy implements Item {
         this.material = material;
         this.batteryRequired = batteryRequired;
         this.educational = educational;
-        this.price = price;
-        this.quantity = quantity;
+      
     }
 
    
@@ -51,21 +48,15 @@ export class Toy implements Item {
         return this.material;
     }
 
-    public isBatteryRequired(): boolean {
+    public isBatteryRequired(): string {
         return this.batteryRequired;
     }
 
-    public isEducational(): boolean {
+    public isEducational(): string {
         return this.educational;
     }
 
-    public getPrice(): number {
-        return this.price;
-    }
-
-    public getQuantity(): number {
-        return this.quantity;
-    }
+   
 
 
  getCategory(): ItemCategory {

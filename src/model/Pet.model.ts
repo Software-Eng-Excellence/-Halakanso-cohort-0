@@ -12,9 +12,7 @@
     private size: string;
     private flavor: string;
     private ecoFriendly: string;
-    private price: string;
-    private quantity: string;
-
+  
     constructor(
         productType: string,
         petType: string,
@@ -22,8 +20,7 @@
         size: string,
         flavor: string,
         ecoFriendly: string,
-        price: string,
-        quantity: string
+      
     ) {
         this.productType = productType;
         this.petType = petType;
@@ -31,8 +28,7 @@
         this.size = size;
         this.flavor = flavor;
         this.ecoFriendly = ecoFriendly;
-        this.price = price;
-        this.quantity = quantity;
+       
     }
 
     
@@ -61,13 +57,7 @@
         return this.ecoFriendly;
     }
 
-    public getPrice(): string {
-        return this.price;
-    }
-
-    public getQuantity(): string {
-        return this.quantity;
-    }
+   
 
     getCategory(): ItemCategory {
         return ItemCategory.PET;
