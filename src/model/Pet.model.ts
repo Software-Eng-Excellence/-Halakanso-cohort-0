@@ -1,7 +1,7 @@
-  import { Item, ItemCategory } from "./item.model";
+  import { IItem, ItemCategory } from "./IItem";
 
 
-   export class Pet implements Item {
+   export class Pet implements IItem {
 
 
 
