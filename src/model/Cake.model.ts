@@ -1,8 +1,8 @@
-import { Item, ItemCategory } from './item.model';
+import { IItem, ItemCategory } from './IItem';
 
 type Type = 'Birthday' | 'Wedding' | 'Anniversary' | 'Graduation' | 'Baby Shower' | 'Other';
 //Fr sicurity reason and data cleaning
- export class Cake implements Item {
+ export class Cake implements IItem {
 
    
 // hone 3mlton private kerml ma bade 8yer fehon kerml hek 3mltlon constractor 
@@ -39,7 +39,7 @@ type Type = 'Birthday' | 'Wedding' | 'Anniversary' | 'Graduation' | 'Baby Shower
         packagingType: string,
         
     ) {
-        this.type = type;
+       this.type = type;//// Assigns the parameter 'type' to the class property 'type'
         this.flavor = flavor;
         this.filling = filling;
         this.size = size;

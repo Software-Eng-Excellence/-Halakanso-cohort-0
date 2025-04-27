@@ -7,7 +7,7 @@ import { Cake } from "../Cake.model";
     private flavor!: string;
     private filling!: string;
     private size!: number;
-    private layers =1;
+    private layers !: number;
     private frostingType!: string;
     private frostingFlavor!: string;
     private decorationType!: string;
@@ -88,34 +88,19 @@ import { Cake } from "../Cake.model";
         return this;
     }
 
-   
+   public static newbuilder(): CakeBuilder {
+        return new CakeBuilder();}
 
     Build(): Cake { 
 
-        const requiredFields = [
-            this.type,
-            this.flavor,
-            this.filling,
-            this.size,
-            this.layers,
-            this.frostingType,
-            this.frostingFlavor,
-            this.decorationType,
-            this.decorationColor,
-            this.customMessage,
-            this.shape,
-            this.allergies,
-            this.specialIngredients,
-            this.packagingType,
-          
-        ];
+        
 
 
-for (const field of requiredFields) {
-    if(!field) {
-        logger.error("All fields must be set before building the Cake object.");
-        throw new Error("All fields must be set before building the Cake object."); 
-    }}
+
+   if(!this.type || !this.flavor || !this.filling || !this.size || !this.layers  || !this.frostingType || !this.frostingFlavor || !this.decorationType || !this.decorationColor || !this.customMessage || !this.shape || !this.allergies || !this.specialIngredients || !this.packagingType) {
+
+ throw new Error("All fields must be set before building the Cake object.!!!"); 
+   }
 
         return new Cake(
             this.type,
